@@ -1,6 +1,7 @@
 Blog = require './resources/blog'
 Product = require './resources/product'
 Order = require './resources/order'
+Fulfillment = require './resources/fulfillment'
 Resource = require './resource'
 Session = require './session'
 

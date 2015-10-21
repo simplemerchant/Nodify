@@ -1,11 +1,14 @@
 BaseChild = require './base_child'
+Metafields = require './metafield'
 
 class Fulfillment extends BaseChild
 	parent: "/orders"
 	slug: "fulfillment"
 	child: "/fulfillments"
+	prefix: "/orders"
 
 	constructor: (site) ->
+		@metafields = new Metafields(@prefix, site)
 		super(site)
 
 	cancel: (orderId, id, callback) ->

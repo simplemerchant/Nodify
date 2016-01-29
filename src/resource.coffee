@@ -38,7 +38,7 @@ class Resource extends singleton
       else if slug and slug isnt 'oauth'
         body = body[if typeof slug is 'object' then slug.long else slug]
 
-      process.nextTick -> callback err, body
+      process.nextTick -> callback err, res, body
 
   get: (url, slug, callback) ->
     @__request__ url, slug, 'GET', callback

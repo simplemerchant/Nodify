@@ -29,7 +29,7 @@ session.orders.all({ limit: 5 }, function (err, orders) {
 var nodify = require('nodify-shopify');
 var session = nodify.createSession(shopName, apiKey, secret, persistentOauth2Token);
 
-session.order.all({ limit: 5 }, function (err, orders) {
+session.order.all({ limit: 5 }, function (err, response, orders) {
   if (err) throw err;
 
   console.log(orders);

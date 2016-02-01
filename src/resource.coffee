@@ -29,9 +29,9 @@ class Resource extends singleton
         options.body = fields
 
     request options, (err, res, body) ->
-      if err or res.statusCode >= 300
+      if err
         return process.nextTick ->
-          callback err or new Error "Status code #{res.statusCode}";
+          callback err
 
       if method is 'DELETE'
         body = slug
